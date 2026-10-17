@@ -3,59 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>孟雨航的前端网页作品集</title>
+    <title>孟雨航 · 前端网页作品集</title>
+    <meta name="description" content="孟雨航的前端课程作品集：三个部署上线的小项目" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="portfolio-shell">
-      <header class="portfolio-header">
-        <h1 class="portfolio-title">
-          <span class="portfolio-title__name">孟雨航的</span>
-          <span class="portfolio-title__highlight">前端网页作品集</span>
+    <div class="glow glow--1" aria-hidden="true"></div>
+    <div class="glow glow--2" aria-hidden="true"></div>
+
+    <main class="shell">
+      <!-- 顶部介绍 -->
+      <header class="hero">
+        <p class="hero__eyebrow">Web 开发课程 · 前端作品集</p>
+        <h1 class="hero__title">
+          你好，我是<span class="hero__name">孟雨航</span>
         </h1>
-        <p class="portfolio-subtitle">这是我的前端网页作品，点击跳转到具体的页面！</p>
+        <p class="hero__desc">
+          计算机科学与技术专业。这里是我这学期前端课程里完成的三个小项目，
+          全部用 HTML / CSS / JavaScript 手写实现，并部署上线，点击卡片就可以访问。
+        </p>
+        <ul class="hero__stats" aria-label="作品统计">
+          <li><strong>03</strong><span>上线项目</span></li>
+          <li><strong>3 门</strong><span>课程作业</span></li>
+          <li><strong>Vercel</strong><span>在线部署</span></li>
+        </ul>
       </header>
 
-      <section class="works-grid" aria-label="作品展示">
-        <article class="work-card">
-          <div class="work-card__preview">
-            <img src="images/work1.png" alt="Quiz Time 预览" />
+      <!-- 作品列表 -->
+      <section class="works" aria-label="作品列表">
+        <a class="work" href="https://week2-quiz3.vercel.app/" target="_blank" rel="noreferrer">
+          <div class="work__preview">
+            <img src="images/work1.png" alt="Quiz Time 项目预览" loading="lazy" />
           </div>
-          <div class="work-card__body">
-            <h2 class="work-card__title">Quiz Time</h2>
-            <a class="work-card__btn" href="https://week2-quiz3.vercel.app/" target="_blank" rel="noreferrer">Quiz</a>
+          <div class="work__body">
+            <span class="work__index" aria-hidden="true">01</span>
+            <div class="work__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <h2 class="work__title">Quiz Time</h2>
+            <p class="work__desc">
+              在线答题小应用：从题库里轮流出题、即时判分，最后给出得分总结，练习 JS 的状态管理。
+            </p>
+            <span class="work__link">访问项目 <i aria-hidden="true">→</i></span>
           </div>
-        </article>
+        </a>
 
-        <article class="work-card">
-          <div class="work-card__preview">
-            <img src="images/work2.png" alt="Register Form 预览" />
+        <a class="work" href="https://week1-registration2.vercel.app/" target="_blank" rel="noreferrer">
+          <div class="work__preview">
+            <img src="images/work2.png" alt="Register Form 项目预览" loading="lazy" />
           </div>
-          <div class="work-card__body">
-            <h2 class="work-card__title">Register Form</h2>
-            <a class="work-card__btn" href="https://week1-registration2.vercel.app/" target="_blank" rel="noreferrer">Register</a>
+          <div class="work__body">
+            <span class="work__index" aria-hidden="true">02</span>
+            <div class="work__tags">
+              <span>HTML</span><span>CSS</span><span>表单校验</span>
+            </div>
+            <h2 class="work__title">Register Form</h2>
+            <p class="work__desc">
+              注册表单页面：用户名、邮箱、密码的格式校验和错误提示，重点练习表单交互与样式细节。
+            </p>
+            <span class="work__link">访问项目 <i aria-hidden="true">→</i></span>
           </div>
-        </article>
+        </a>
 
-        <article class="work-card">
-          <div class="work-card__preview">
-            <img src="images/work3.png" alt="Recipe Finder 预览" />
+        <a class="work" href="https://week2-recipe-search2.vercel.app/" target="_blank" rel="noreferrer">
+          <div class="work__preview">
+            <img src="images/work3.png" alt="Recipe Finder 项目预览" loading="lazy" />
           </div>
-          <div class="work-card__body">
-            <h2 class="work-card__title">Recipe Finder</h2>
-            <a class="work-card__btn" href="https://week2-recipe-search2.vercel.app/" target="_blank" rel="noreferrer">Recipe</a>
+          <div class="work__body">
+            <span class="work__index" aria-hidden="true">03</span>
+            <div class="work__tags">
+              <span>JavaScript</span><span>REST API</span><span>异步请求</span>
+            </div>
+            <h2 class="work__title">Recipe Finder</h2>
+            <p class="work__desc">
+              食谱搜索应用：接入 TheMealDB 公开接口，按关键词实时搜索菜品并查看做法详情。
+            </p>
+            <span class="work__link">访问项目 <i aria-hidden="true">→</i></span>
           </div>
-        </article>
+        </a>
       </section>
 
-      <footer class="portfolio-footer">
-        <p>孟雨航 · 计算机科学与技术 · 2026</p>
+      <footer class="footer">
+        <p>孟雨航 · 计算机科学与技术 · 2026 前端课程作品集</p>
       </footer>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>
